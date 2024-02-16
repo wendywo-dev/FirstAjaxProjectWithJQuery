@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <title>Ajax & JQuery</title>
+  </head>
+  <body>
+    <main>
+      <div id="test">
+        <p>This is a paragraph.</p>
+      </div>
+      <button id="btn">Click to change</button>
+    </main>
+    <script>
+      $("#btn").click(() => {
+        $("#test").load(
+          "data.txt",
+          { Name: "Daniel", LastName: "Strong" },
+          function () {
+            alert("Hi there!");
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
